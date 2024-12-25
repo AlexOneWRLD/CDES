@@ -1,0 +1,22 @@
+@include('./settings/_head.html', {
+'title' : 'Заголовок текщей страницы',
+'description' : 'Описание текщей страницы',
+'keywords' : 'это, ключевые, запросы, текщей страницы',
+'robots' : 'noindex, nofollow',
+'ogImage' : '',
+})
+
+@include('./components/blocks/_header.html')
+
+
+
+<main class="main">
+    @include('./pages/home/_hero.html')
+    @include('./pages/home/_competencies.html')
+    @include('./pages/home/_about.html')
+    @include('./pages/home/_projects.html')
+    @include('./pages/home/_vacancies.html')
+</main>
+
+@include('./components/blocks/_footer.html')
+@include('./settings/_bottom.html')
