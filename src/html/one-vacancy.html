@@ -1,0 +1,15 @@
+@include('./settings/_head.html', {
+'title' : 'О журнале | Научный журнал',
+'description' : 'Общая информация и выходные данные СМИ',
+'robots' : 'index, follow',
+'ogImage' : '',
+})
+
+@include('./components/blocks/_header.html')
+
+<main class="main">
+    @include('./pages/one-vacancy/_one-vacancy.html')
+</main>
+
+@include('./components/blocks/_footer.html')
+@include('./settings/_bottom.html')
