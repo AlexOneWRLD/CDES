@@ -1,7 +1,8 @@
 @mixin font-face($font-family, $url, $weight) {
 	@font-face {
 		font-family: '#{$font-family}';
-		src: url('../fonts/#{$url}.woff2') format('woff2'),
+		src:
+			url('../fonts/#{$url}.woff2') format('woff2'),
 			url('../fonts/#{$url}.woff') format('woff');
 		font-weight: #{$weight};
 		font-display: swap;
@@ -10,5 +11,5 @@
 }
 
 //FeatureMono
-@include font-face(FeatureMono, FeatureMono-Light, 300);
-@include font-face(FeatureMono, FeatureMono-Regular, 400);
+@include font-face('Feature Mono', FeatureMono-Light, 300);
+@include font-face('Feature Mono', FeatureMono-Regular, 400);
