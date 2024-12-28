@@ -1,5 +1,4 @@
 .footer {
-margin: 50px 10px;
 border-radius: 30px;
 padding:0 50px;
 font-size: 32px;
@@ -57,7 +56,8 @@ color: var(--color-pink-400);
 position: relative;
 padding: 0 40px 0 0;
 
-&::after {
+&--desktop{
+  &::after {
 @include bg-properties(contain);
 
 content: ' ';
@@ -73,10 +73,9 @@ rotate: 135deg;
 @include mq(lg) {
 display: none;
 }
-
 }
 
-&__mobile{
+&--mobile{
 position: relative;
 display: none;
 padding: 0 40px 0 0;
@@ -103,5 +102,7 @@ display: block;
     top: -4px;
   }
 }
+}
+
 }
 }
