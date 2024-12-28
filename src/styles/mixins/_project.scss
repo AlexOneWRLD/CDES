@@ -1,0 +1,13 @@
+@mixin card($padding: 40px, $bg: var(--color-black-200)) {
+	padding: $padding;
+	background-color: $bg;
+	border-radius: 30px;
+}
+
+@mixin typography($fz: 32px, $color: var(--color-white), $mb: 24px, $fw: 300) {
+	font-size: $fz;
+	color: $color;
+	font-weight: $fw;
+	margin-bottom: $mb;
+	line-height: 1.2;
+}
