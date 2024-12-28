@@ -1,21 +1,58 @@
 .header {
-	position: relative;
-	left: 0;
-	right: 0;
-	top: 0;
-	z-index: 2;
+position: relative;
+z-index: 50;
+height: 92px;
+font-weight: 600;
 
-	&__container {
-		top: -50px;
-		transition: top 0.3s;
-	}
+@include mq(md) {
+height: 70px;
+}
 
-	&--fixed {
-		.header__container {
-			position: fixed;
-			left: 0;
-			width: 100%;
-			transform: translateY(0);
+&--fixed {
+.header__container {
+position: fixed;
+left: 0;
+top: 0;
+width: 100%;
+background-color: inherit;
+}
+}
+
+&__nav {
+		@include flex-simple(30px);
+
+		align-items: center;
+		padding: 25px 0;
+        position: relative;
+
+		@include mq(lg) {
+			padding: 20px 0;
 		}
 	}
+
+&__container {
+top: -50px;
+height: inherit;
+background-color: inherit;
+transition: top 0.3s;
+display: block;
 }
+
+&__logo {
+position: relative;
+z-index: 50;
+margin-right: auto;
+max-width: 330px;
+max-height: 98px;
+}
+&__menu{
+    position: absolute;
+    right: 0;
+    top: 52px;
+}
+}
+
+
+
+
+
