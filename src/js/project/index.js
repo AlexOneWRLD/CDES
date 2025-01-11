@@ -8,3 +8,29 @@ toggleInput.addEventListener("click", function () {
         toggleLabel.style.borderRadius = "10px"; // Устанавливаем радиус для нижних углов
     }
 });
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   const reveals = document.querySelectorAll(".hero__text");
+
+//   reveals.forEach((reveal, index) => {
+//     setTimeout(() => {
+//       reveal.classList.add("hero__text--active");
+//     }, index * 800); // Увеличиваем задержку для каждого элемента
+//   });
+// });
+
+
+
+var wrapper = document.getElementsByClassName("hero__text")[0];
+wrapper.style.opacity = "1";
+wrapper.innerHTML = wrapper.textContent.replace(/./g, "<span>$&</span>");
+
+var spans = wrapper.getElementsByTagName("span");
+
+for (var i = 0; i < spans.length; i++) {
+  spans[i].style.animationDelay = i * 30 + "ms";
+}
