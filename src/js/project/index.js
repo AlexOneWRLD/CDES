@@ -2,16 +2,12 @@ const toggleInput = document.querySelector('.toggleMenu[type="checkbox"]');
 const toggleLabel = document.querySelector('label[for="menu"]');
 
 toggleInput.addEventListener("click", function () {
-    if (this.checked) {
-        toggleLabel.style.borderRadius = "10px 10px 0 0 "; // Убираем радиус при активном состоянии
-    } else {
-        toggleLabel.style.borderRadius = "10px"; // Устанавливаем радиус для нижних углов
-    }
+  if (this.checked) {
+    toggleLabel.style.borderRadius = "10px 10px 0 0 "; // Убираем радиус при активном состоянии
+  } else {
+    toggleLabel.style.borderRadius = "10px"; // Устанавливаем радиус для нижних углов
+  }
 });
-
-
-
-
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   const reveals = document.querySelectorAll(".hero__text");
@@ -23,9 +19,17 @@ toggleInput.addEventListener("click", function () {
 //   });
 // });
 
-
-
 var wrapper = document.getElementsByClassName("hero__text")[0];
+wrapper.style.opacity = "1";
+wrapper.innerHTML = wrapper.textContent.replace(/./g, "<span>$&</span>");
+
+var spans = wrapper.getElementsByTagName("span");
+
+for (var i = 0; i < spans.length; i++) {
+  spans[i].style.animationDelay = i * 30 + "ms";
+}
+
+var wrapper = document.getElementsByClassName("competencies__text")[0];
 wrapper.style.opacity = "1";
 wrapper.innerHTML = wrapper.textContent.replace(/./g, "<span>$&</span>");
 
