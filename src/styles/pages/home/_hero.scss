@@ -1,37 +1,147 @@
 .hero {
-	margin-top: 150px;
-	height: 100vh;
+	padding: 50px 0 150px;
 
-	&__decor {
-		@include flex-simple(40px);
-
-		justify-content: center;
+	@include mq(lg) {
+		padding: 90px 0 70px;
 	}
 
-	&__tag {
+	&__container {
+		@include flex-alignment(60px, center, center);
+
 		position: relative;
-		height: 405px;
-		max-width: 368px;
+		margin-bottom: 60px;
+	}
 
-		&::before {
-			@include bg-properties(contain);
+	&__images {
+		position: relative;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
 
-			content: '';
-			position: absolute;
-			inset: 0;
-			background-image: url('../img/tag.png');
-			opacity: 0.5;
-		}
-
-		svg {
+		picture {
+			display: inline-block;
 			width: 100%;
 			height: 100%;
 		}
+	}
 
-		&:last-child {
-			&::before {
-				background-image: url('../img/tag-right.png');
+	&__wrapper {
+		@include flex-alignment(30px, center, center);
+
+		position: absolute;
+		padding: 30px;
+		width: 100%;
+		height: 100vh;
+	}
+
+	&__text {
+		margin-bottom: 30px;
+		font-weight: 300;
+		font-size: calc(16px + 23 * (100vw / 1420));
+		line-height: 1.6;
+		opacity: 0;
+
+		// transition: opacity 2.5s ease-out, transform 4.5s ease-out;
+
+		&--active {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		span {
+			opacity: 0;
+			animation: fade 400ms ease-in-out forwards;
+		}
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 12px;
 			}
 		}
+
+		@keyframes fade {
+			0% {
+				left: 10px;
+				top: 10px;
+				opacity: 0;
+			}
+
+			50% {
+				opacity: 0.9;
+			}
+
+			100% {
+				left: 0;
+				top: 0;
+				opacity: 1;
+			}
+		}
+	}
+
+	&__runline {
+		@include flex-alignment(30px, center, center);
+
+		overflow: hidden;
+		height: 40px;
+		box-sizing: border-box;
+		font-weight: 300;
+		font-size: 18px;
+		white-space: nowrap;
+		background-color: var(--color-black);
+
+		&--pink {
+			background-color: var(--color-pink-600);
+		}
+	}
+}
+
+.marquee {
+	display: inline-block;
+	padding-left: 2%;
+	opacity: 0;
+	animation: marquee 10s linear infinite;
+}
+
+.marquee-left {
+	top: 0;
+	opacity: 1;
+	animation: marquee-left 25s linear infinite;
+}
+
+.marquee-right {
+	top: 0;
+	opacity: 1;
+	animation: marquee-right 25s linear infinite;
+}
+
+@keyframes marquee-left {
+	0% {
+		opacity: 0;
+		transform: translate(100%, 0);
+	}
+
+	20% {
+		opacity: 0.9;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(-100%, 0);
+	}
+}
+
+@keyframes marquee-right {
+	0% {
+		opacity: 0;
+		transform: translate(-100%, 0);
+	}
+
+	20% {
+		opacity: 0.9;
+	}
+
+	100% {
+		opacity: 2;
+		transform: translate(100%, 0);
 	}
 }
