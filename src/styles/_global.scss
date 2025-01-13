@@ -102,7 +102,7 @@ body {
 		box-shadow: 0 0 0 2px var(--color-pink-400);
 	}
 
-	@include mq(md) {
+	@include mq(lg) {
 		height: 55px;
 		max-width: 184px;
 	}
