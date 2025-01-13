@@ -78,24 +78,6 @@
 				margin-bottom: 12px;
 			}
 		}
-
-		@keyframes fade {
-			0% {
-				left: 10px;
-				top: 10px;
-				opacity: 0;
-			}
-
-			50% {
-				opacity: 0.9;
-			}
-
-			100% {
-				left: 0;
-				top: 0;
-				opacity: 1;
-			}
-		}
 	}
 
 	&__runline {
