@@ -1,0 +1,47 @@
+.marquee {
+	display: flex;
+	padding-left: 2%;
+	width: 100%;
+	opacity: 1;
+	gap: 8px;
+
+	&--left {
+		animation: marquee-left 25s linear infinite;
+	}
+
+	&--right {
+		animation: marquee-right 25s linear infinite;
+	}
+}
+
+@keyframes marquee-left {
+	0% {
+		opacity: 0;
+		transform: translate(100%, 0);
+	}
+
+	20% {
+		opacity: 0.9;
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(-100%, 0);
+	}
+}
+
+@keyframes marquee-right {
+	0% {
+		opacity: 0;
+		transform: translate(-100%, 0);
+	}
+
+	20% {
+		opacity: 0.9;
+	}
+
+	100% {
+		opacity: 2;
+		transform: translate(100%, 0);
+	}
+}

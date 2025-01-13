@@ -1,15 +1,17 @@
 .hero {
-	padding: 50px 0 150px;
-
-	@include mq(lg) {
-		padding: 90px 0 70px;
-	}
+	display: flex;
+	flex-direction: column;
+	padding-top: calc(var(--header-height) + 50px);
+	padding-bottom: 50px;
+	height: 100vh;
+	height: 100dvh;
 
 	&__container {
 		@include flex-alignment(60px, center, center);
 
 		position: relative;
 		padding-bottom: 60px;
+		height: 100%;
 	}
 
 	&__decor {
@@ -55,8 +57,9 @@
 	}
 
 	&__text {
+		@include adaptive-value-base('font-size', 48, 30, 0);
+
 		font-weight: 300;
-		font-size: calc(16px + 23 * (100vw / 1420));
 		line-height: 1.6;
 		opacity: 0;
 
@@ -109,53 +112,5 @@
 		&--pink {
 			background-color: var(--color-pink-600);
 		}
-	}
-}
-
-.marquee {
-	display: flex;
-	padding-left: 2%;
-	width: 100%;
-	opacity: 1;
-	gap: 8px;
-
-	&--left {
-		animation: marquee-left 25s linear infinite;
-	}
-
-	&--right {
-		animation: marquee-right 25s linear infinite;
-	}
-}
-
-@keyframes marquee-left {
-	0% {
-		opacity: 0;
-		transform: translate(100%, 0);
-	}
-
-	20% {
-		opacity: 0.9;
-	}
-
-	100% {
-		opacity: 1;
-		transform: translate(-100%, 0);
-	}
-}
-
-@keyframes marquee-right {
-	0% {
-		opacity: 0;
-		transform: translate(-100%, 0);
-	}
-
-	20% {
-		opacity: 0.9;
-	}
-
-	100% {
-		opacity: 2;
-		transform: translate(100%, 0);
 	}
 }
