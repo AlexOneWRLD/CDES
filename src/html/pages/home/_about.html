@@ -1,0 +1,52 @@
+<section class="about">
+    <div class="about__container container">
+         <div class="about__start">
+             <h2 class="about__title">
+                О центре /
+              </h2>
+            <div class="about__text">
+                <p>
+          мы оставили работу в крупных компаниях, чтобы погрузиться в творческий процесс и создать что-то, что будет вдохновлять будущие поколения /
+                </p>
+            </div>
+        </div>
+
+         <div class="about__end">
+          <ul class="about__items">
+            <li class="about__item">
+              @include('../../components/cards/_about-card.html', {
+              title: 'В нашей команде',
+              text: 'Специалист по React-разработке с опытом работы  использования библиотеки React в течении последних 30 лет, 24/7',
+              img: '1',
+              class: 'about-card--first'
+            })
+          </li>
+          <li class="about__item">
+            @include('../../components/cards/_about-card.html', {
+              title: '',
+              text: 'Специалист по React-разработке с опытом работы  использования библиотеки React в течении последних 30 лет, 24/7',
+              img: '2',
+              class: ''
+            })
+          </li>
+           <li class="about__item">
+
+            @include('../../components/cards/_about-card.html', {
+              title: '',
+              text: 'React разработка, Битрикс разработка, РНР бэк',
+              img: '3',
+              class: ''
+            })
+          </li>
+           <li class="about__item">
+            @include('../../components/cards/_about-card.html', {
+              title: '',
+              text: 'Специалист по React-разработке с опытом работы  использования библиотеки React в течении последних 30 лет, 24/7',
+              img: '4',
+              class: 'about-card--last'
+            })
+          </li>
+          </ul>
+         </div>
+    </div>
+</section>
