@@ -133,3 +133,26 @@ body {
 		opacity: 0.5;
 	}
 }
+
+.button-back{
+  position: relative;
+  border-radius: 10px;
+  padding: 5px 20px 5px 110px;
+  font-size: 18px;
+  text-align: right;
+  text-transform: uppercase;
+  background-color: var(--color-pink-600);
+
+  &::before{
+    @include bg-properties(contain);
+
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 2px;
+    width: 30px;
+    height: 30px;
+    background-image:url('../img/icons/arrow.svg');
+    rotate: 180deg;
+  }
+}

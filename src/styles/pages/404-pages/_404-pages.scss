@@ -1,0 +1,8 @@
+.competencie {
+&__container {
+    @include flex-alignment(50px, center, flex-start, column);
+    @include adaptive-value-base("font-size", 48, 30, 0);
+
+    height: 100vh;
+  }
+}
