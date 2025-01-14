@@ -1,0 +1,12 @@
+<article class="competencies-card @class">
+  <div class="competencies-card__start">
+        <span class="competencies-card__number">@number</span>
+        <h3 class="competencies-card__title">
+         <a href="@href"> @title</a>
+        </h3>
+    </div>
+
+     <div class="competencies-card__text">
+          @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
+    </div>
+</article>
