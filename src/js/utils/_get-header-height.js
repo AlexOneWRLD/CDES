@@ -1,6 +1,17 @@
-export const getHeaderHeight = () => {
-    if (document.querySelector('.header')) {
-        const headerHeight = document.querySelector('.header').offsetHeight;
-        document.querySelector(':root').style.setProperty('--header-height', `${headerHeight}px`);
+import { throttle } from '../utils/index.js';
+
+(function () {
+    const header = document.querySelector('.header')
+    if (!header) {
+        return null
     }
-};
+
+    const changeHeaderHeight = () => {
+        document.querySelector(':root').style.setProperty('--header-height', `${header.offsetHeight}px`);
+    }
+
+    changeHeaderHeight()
+
+    const changeHeaderHeightThrottle = throttle(changeHeaderHeight)
+    window.addEventListener('resize', changeHeaderHeightThrottle)
+})()
