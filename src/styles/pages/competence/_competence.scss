@@ -1,0 +1,36 @@
+.competencie {
+  margin: 250px 0 100px;
+
+  &__container {
+    @include flex-alignment(37px, flex-start, flex-start, column);
+    @include card(40px 50px);
+  }
+
+  &__number {
+    color: var(--color-pink-400);
+
+    @include mq(md) {
+      font-size: 14px;
+    }
+  }
+
+  &__title {
+    @include adaptive-value-base("font-size", 33, 26, 0);
+
+    font-weight: 300;
+  }
+
+  &__body {
+    @include flex-alignment(120px);
+    @include adaptive-value-base("font-size", 18, 14, 0);
+
+    @include mq(lg) {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+
+  &__footer{
+    @include adaptive-value-base("font-size", 48, 30, 0);
+  }
+}
