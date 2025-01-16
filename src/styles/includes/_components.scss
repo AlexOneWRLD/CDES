@@ -1,5 +1,6 @@
 // ui
 @import '../components/ui/button';
+@import '../components/ui/logo';
 @import '../components/ui/marquee';
 
 // blocks
@@ -7,8 +8,8 @@
 @import '../components/blocks/header/burger-button';
 @import '../components/blocks/header/burger-menu';
 @import '../components/blocks/header/header-menu';
+@import '../components/blocks/descr-block';
 @import '../components/blocks/footer';
-@import '../components/blocks/title-block';
 
 // cards
 @import '../components/cards/product-card';

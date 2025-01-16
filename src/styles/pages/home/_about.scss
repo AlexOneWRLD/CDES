@@ -1,38 +1,28 @@
 .about {
-  padding: 150px 0;
+	&__container {
+		@include flex-alignment(200px, center, flex-start, column);
 
-  @include mq(lg) {
-    padding: 100px 0;
-  }
+		margin-bottom: 45px;
 
-  @include mq(md) {
-    padding: 60px 0;
-  }
+		@include mq(lg) {
+			gap: 100px;
+		}
 
-  &__container {
-    @include flex-alignment(200px, center, flex-start, column);
+		@include mq(md) {
+			gap: 50px;
+		}
+	}
 
-    margin-bottom: 45px;
+	&__body {
+		width: 100%;
+	}
 
-    @include mq(lg) {
-      gap: 100px;
-    }
+	&__item {
+		position: relative;
+		cursor: pointer;
 
-    @include mq(md) {
-      gap: 50px;
-    }
-  }
-
-  &__body {
-    width: 100%;
-  }
-
-  &__item {
-    position: relative;
-    cursor: pointer;
-
-    &:not(:last-child) {
-      border-bottom: 1px solid var(--color-black-100);
-    }
-  }
+		&:not(:last-child) {
+			border-bottom: 1px solid var(--color-black-100);
+		}
+	}
 }

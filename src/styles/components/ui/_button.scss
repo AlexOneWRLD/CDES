@@ -1,0 +1,51 @@
+.button {
+	@include flex-alignment(12px);
+
+	border-radius: 10px;
+	padding: 10px 20px;
+	font-size: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--color-white);
+	background-color: var(--color-pink-600);
+	transition:
+		background-color 0.3s,
+		box-shadow 0.3s,
+		opacity 0.3s;
+
+	&:disabled {
+		opacity: 0.3;
+		pointer-events: none;
+	}
+
+	&:focus-visible {
+		outline: 0;
+		box-shadow: 0 0 0 2px var(--color-pink-600);
+		background-color: transparent;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--color-pink-400);
+		}
+	}
+
+	&--back {
+		position: relative;
+		padding: 5px 20px 5px 110px;
+		text-align: right;
+
+		&::before {
+			@include bg-properties(contain);
+
+			content: '';
+			position: absolute;
+			left: 15px;
+			top: 2px;
+			width: 30px;
+			height: 30px;
+			background-image: url('../img/icons/arrow.svg');
+			rotate: 180deg;
+		}
+	}
+}
