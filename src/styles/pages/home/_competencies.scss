@@ -23,60 +23,6 @@
     }
   }
 
-  &__header {
-    @include flex-alignment(0, center, flex-start, column);
-    @include adaptive-value-base("font-size", 48, 30, 0);
-
-    margin-bottom: 45px;
-    width: 100%;
-    font-weight: 300;
-    font-size: calc(16px + 23 * (100vw / 1420));
-    line-height: 1.6;
-  }
-
-  &__title {
-    color: var(--color-pink-400);
-  }
-
-  &__text {
-    margin-bottom: 30px;
-    opacity: 0;
-
-    &--active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    span {
-      opacity: 0;
-      animation: fade 400ms ease-in-out forwards;
-    }
-
-    p {
-      &:not(:last-child) {
-        margin-bottom: 12px;
-      }
-    }
-
-    @keyframes fade {
-      0% {
-        left: 10px;
-        top: 10px;
-        opacity: 0;
-      }
-
-      50% {
-        opacity: 0.9;
-      }
-
-      100% {
-        left: 0;
-        top: 0;
-        opacity: 1;
-      }
-    }
-  }
-
   &__body {
     width: 100%;
   }
@@ -127,3 +73,4 @@
     }
   }
 }
+

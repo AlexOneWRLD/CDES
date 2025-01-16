@@ -1,17 +1,10 @@
 <section class="about">
     <div class="about__container container">
-         <div class="about__start">
-             <h2 class="about__title">
-                О центре /
-              </h2>
-            <div class="about__text">
-                <p>
-          мы оставили работу в крупных компаниях, чтобы погрузиться в творческий процесс и создать что-то, что будет вдохновлять будущие поколения /
-                </p>
-            </div>
-        </div>
-
-         <div class="about__end">
+         @include('../../components/blocks/_title-block.html', {
+              title: 'О центре /',
+              text: 'мы оставили работу в крупных компаниях, чтобы погрузиться в творческий процесс и создать что-то, что будет вдохновлять будущие поколения /',
+            })
+         <div class="about__body">
           <ul class="about__items">
             <li class="about__item">
               @include('../../components/cards/_about-card.html', {
