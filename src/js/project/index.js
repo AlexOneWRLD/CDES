@@ -2,16 +2,12 @@ const toggleInput = document.querySelector('.toggleMenu[type="checkbox"]');
 const toggleLabel = document.querySelector('label[for="menu"]');
 
 toggleInput.addEventListener("click", function () {
-    if (this.checked) {
-        toggleLabel.style.borderRadius = "10px 10px 0 0 "; // Убираем радиус при активном состоянии
-    } else {
-        toggleLabel.style.borderRadius = "10px"; // Устанавливаем радиус для нижних углов
-    }
+  if (this.checked) {
+    toggleLabel.style.borderRadius = "10px 10px 0 0 "; // Убираем радиус при активном состоянии
+  } else {
+    toggleLabel.style.borderRadius = "10px"; // Устанавливаем радиус для нижних углов
+  }
 });
-
-
-
-
 
 // document.addEventListener("DOMContentLoaded", () => {
 //   const reveals = document.querySelectorAll(".hero__text");
@@ -22,8 +18,6 @@ toggleInput.addEventListener("click", function () {
 //     }, index * 800); // Увеличиваем задержку для каждого элемента
 //   });
 // });
-
-
 
 var wrapper = document.getElementsByClassName("hero__text")[0];
 wrapper.style.opacity = "1";
