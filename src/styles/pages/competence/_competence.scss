@@ -1,5 +1,11 @@
 .competencie {
-  margin: 250px 0 100px;
+  display: flex;
+	flex-direction: column;
+	padding-top: calc(var(--header-height) + 50px);
+	padding-bottom: 50px;
+	height: 100vh;
+	height: 100dvh;
+
 
   &__container {
     @include flex-alignment(37px, flex-start, flex-start, column);
