@@ -38,8 +38,7 @@ body {
 
 	border-radius: 10px;
 	padding: 10px 20px;
-	font-size: 20px;
-	text-align: center;
+	font-size: 18px;
 	text-transform: uppercase;
 	color: var(--color-white);
 	background-color: var(--color-pink-600);
@@ -62,6 +61,25 @@ body {
 	@media (any-hover: hover) {
 		&:hover {
 			background-color: var(--color-pink-400);
+		}
+	}
+
+	&--back {
+		position: relative;
+		padding: 5px 20px 5px 110px;
+		text-align: right;
+
+		&::before {
+			@include bg-properties(contain);
+
+			content: '';
+			position: absolute;
+			left: 15px;
+			top: 2px;
+			width: 30px;
+			height: 30px;
+			background-image: url('../img/icons/arrow.svg');
+			rotate: 180deg;
 		}
 	}
 }

@@ -1,0 +1,38 @@
+.about {
+  padding: 150px 0;
+
+  @include mq(lg) {
+    padding: 100px 0;
+  }
+
+  @include mq(md) {
+    padding: 60px 0;
+  }
+
+  &__container {
+    @include flex-alignment(200px, center, flex-start, column);
+
+    margin-bottom: 45px;
+
+    @include mq(lg) {
+      gap: 100px;
+    }
+
+    @include mq(md) {
+      gap: 50px;
+    }
+  }
+
+  &__body {
+    width: 100%;
+  }
+
+  &__item {
+    position: relative;
+    cursor: pointer;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--color-black-100);
+    }
+  }
+}
