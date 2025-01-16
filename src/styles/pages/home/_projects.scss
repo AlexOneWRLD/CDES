@@ -1,0 +1,37 @@
+.projects-block {
+	padding-bottom: 125px;
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		margin-bottom: 50px;
+		gap: 28px 10px;
+
+		@include mq(lg) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include mq(md) {
+			margin-bottom: 32px;
+		}
+
+		@include mq(sm) {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__links {
+		@include flex-simple(10px);
+		flex-wrap: wrap;
+	}
+
+	&__link {
+		// flex-grow: 1;
+		font-size: 18px;
+
+		@include mq(md) {
+			flex-grow: 1;
+			text-align: center;
+		}
+	}
+}
