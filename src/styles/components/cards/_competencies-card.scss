@@ -1,31 +1,12 @@
 .competencies-card {
 	@include flex-alignment(60px, space-between, flex-start);
 	@include card(70px 50px 40px);
+	@include animation-hover-card;
 
-	position: relative;
-	overflow: hidden;
 	border-radius: 0;
 
 	@include mq(lg) {
 		padding: 60px 20px 30px;
-	}
-
-	&::after {
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		background-color: var(--color-pink-600);
-		transform: translateX(150%);
-		transition: transform 0.9s;
-	}
-
-	&:hover {
-		&::after {
-			transform: translateX(0);
-		}
 	}
 
 	@include mq(lg) {
@@ -34,7 +15,7 @@
 	}
 
 	&__title {
-		z-index: 10;
+		border-radius: inherit;
 		font-weight: 300;
 		font-size: 33px;
 
@@ -47,27 +28,36 @@
 		}
 
 		a {
+			border-radius: inherit;
+
 			&::before {
 				content: '';
 				position: absolute;
 				inset: 0;
+				border: 2px solid transparent;
+				border-radius: inherit;
+				transition: border-color 0.3s;
+			}
+
+			&:focus-visible {
+				outline: 0;
+
+				&::before {
+					border-color: var(--color-pink-600);
+				}
 			}
 		}
 	}
 
 	&__text {
-		z-index: 10;
+		@include paragraph-margin;
+
 		width: 100%;
-		max-width: 598px;
+		max-width: 600px;
 
 		@include mq(md) {
+			max-width: 100%;
 			font-size: 14px;
-		}
-
-		p {
-			&:not(:last-child) {
-				margin-bottom: 12px;
-			}
 		}
 	}
 }

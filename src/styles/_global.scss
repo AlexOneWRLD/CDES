@@ -16,6 +16,12 @@ body {
 	@include mq(md) {
 		padding: 0 16px;
 	}
+
+	&--mobile-large {
+		@include mq(md) {
+			padding: 0 6px;
+		}
+	}
 }
 
 .wrapper {
@@ -84,5 +90,14 @@ body {
 	&--active {
 		z-index: 4;
 		opacity: 0.5;
+	}
+}
+
+.caption {
+	font-size: 18px;
+	color: var(--color-pink-400);
+
+	@include mq(lg) {
+		font-size: 14px;
 	}
 }
