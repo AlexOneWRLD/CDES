@@ -1,11 +1,10 @@
-<article class="about-card @class">
-    <div class="about-card__start">
-        <span class="about-card__number">@title</span>
-        <h3 class="about-card__title">@text</h3>
+<article class="about-card">
+    <div class="about-card__text">
+        @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
     </div>
-    <picture>
-        <source srcset="img/home-pages/about/@img.avif" type="image/avif">
-        <source srcset="img/home-pages/about/@img.webp" type="image/webp">
-        <img class="about-card__img " src="img/home-pages/about/@img.jpg" alt="Иконка со специалистом" width="160" height="160" loading="lazy">
+    <picture class="about-card__picture">
+        <source srcset="img/home-pages/about/@img.avif 1x, img/home-pages/about/@img@2x.avif 2x" type="image/avif">
+        <source srcset="img/home-pages/about/@img.webp 1x, img/home-pages/about/@img@2x.webp 2x" type="image/webp">
+        <img class="about-card__img" src="img/home-pages/about/@img.jpg" srcset="img/home-pages/about/@img@2x.jpg 2x" alt="Специалист" width="160" height="160" loading="lazy">
     </picture>
 </article>

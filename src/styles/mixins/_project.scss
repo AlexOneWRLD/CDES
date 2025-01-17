@@ -11,3 +11,55 @@
 	line-height: 1.2;
 	color: $color;
 }
+
+@mixin resize-picture($pb: 40%, $fit: cover) {
+	position: relative;
+	padding-bottom: $pb;
+
+	picture,
+	img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	img {
+		object-fit: $fit;
+	}
+}
+
+@mixin paragraph-margin($mb: 12px) {
+	p {
+		&:not(:last-child) {
+			margin-bottom: $mb;
+		}
+	}
+}
+
+@mixin animation-hover-card {
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		background-color: var(--color-pink-600);
+		transform: translateX(150%);
+		transition: transform 0.9s;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			&::after {
+				transform: translateX(0);
+			}
+		}
+	}
+}

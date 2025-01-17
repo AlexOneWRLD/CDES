@@ -1,76 +1,42 @@
 .competencies {
-  padding: 150px 0;
+	&__items {
+		counter-reset: item-counter;
+	}
 
-  @include mq(lg) {
-    padding: 100px 0;
-  }
+	&__item {
+		counter-increment: item-counter;
+		position: relative;
 
-  @include mq(md) {
-    padding: 60px 0;
-  }
+		&::before {
+			content: counter(item-counter, decimal-leading-zero);
+			position: absolute;
+			left: 52px;
+			top: 28px;
+			z-index: 4;
+			color: var(--color-pink-400);
 
-  &__container {
-    @include flex-alignment(200px, center, flex-start, column);
+			@include mq(lg) {
+				left: 20px;
+				font-size: 14px;
+			}
+		}
 
-    margin-bottom: 45px;
+		&:first-child {
+			.competencies-card {
+				border-top-left-radius: 30px;
+				border-top-right-radius: 30px;
+			}
+		}
 
-    @include mq(lg) {
-      gap: 100px;
-    }
+		&:last-child {
+			.competencies-card {
+				border-bottom-right-radius: 30px;
+				border-bottom-left-radius: 30px;
+			}
+		}
 
-    @include mq(md) {
-      gap: 50px;
-    }
-  }
-
-  &__body {
-    width: 100%;
-  }
-
-  &__item {
-    @include card(40px 50px);
-
-    counter-reset: section;
-    position: relative;
-    overflow: hidden;
-    border-radius: 0;
-
-    span::before {
-      counter-increment: section;
-      content: counter(section) - 100;
-    }
-
-    &:first-child {
-      border-top-left-radius: 30px;
-      border-top-right-radius: 30px;
-    }
-
-    &:last-child {
-      border-bottom-right-radius: 30px;
-      border-bottom-left-radius: 30px;
-    }
-
-    &:not(:last-child) {
-      border-bottom: 1px solid var(--color-black-100);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: var(--color-pink-600);
-      transform: translateX(150%);
-      transition: transform 0.9s;
-    }
-
-    &:hover {
-      &::after {
-        transform: translateX(0);
-      }
-    }
-  }
+		&:not(:last-child) {
+			border-bottom: 1px solid var(--color-black-100);
+		}
+	}
 }
-
