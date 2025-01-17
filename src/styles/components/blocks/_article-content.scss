@@ -1,0 +1,10 @@
+
+ .article-content {
+    @include flex-alignment(120px);
+    @include adaptive-value-base("font-size", 18, 14, 0);
+
+    @include mq(lg) {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
