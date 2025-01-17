@@ -1,43 +1,41 @@
-<section class="about">
-    <div class="about__container container">
-         @include('../../components/blocks/_title-block.html', {
-              title: 'Вакансии /',
-              text: 'мы оставили работу в крупных компаниях, чтобы погрузиться в творческий процесс и создать что-то, что будет вдохновлять будущие поколения /',
-            })
-         <div class="about__body">
-          <ul class="about__items">
-            <li class="about__item">
-              @include('../../components/cards/_about-card.html', {
-              title: 'Ищем специалистов',
-              text: 'Специалист по React-разработке с опытом работы  использования библиотеки React в течении последних 30 лет, 24/7',
-              class: 'about-card--first',
-              classimg: 'about-card__img--hidden'
-            })
-          </li>
-          <li class="about__item">
-            @include('../../components/cards/_about-card.html', {
-              title: '',
-              text: 'Middle PHP-разработчик (Bitrix) Специалист по React-разработке с опытом работы  использования библиотеки React в течении последних 30 лет, 24/7',
-              classimg: 'about-card__img--hidden'
-            })
-          </li>
-           <li class="about__item">
-
-            @include('../../components/cards/_about-card.html', {
-              title: '',
-              text: 'Специалист по React-разработке с опытом работы  использования библиотеки React в течении последних 30 лет, 24/7',
-              classimg: 'about-card__img--hidden'
-            })
-          </li>
-           <li class="about__item">
-            @include('../../components/cards/_about-card.html', {
-              title: '',
-              text: 'Специалист по React-разработке с опытом работы  использования библиотеки React в течении последних 30 лет, 24/7',
-              class: 'about-card--last',
-              classimg: 'about-card__img--hidden'
-            })
-          </li>
-          </ul>
-         </div>
+<section class="vacancies section">
+    @include('../../components/blocks/_descr-block.html', {
+    title: 'Вакансии /',
+    text: ['мы оставили работу в крупных компаниях, чтобы погрузиться в творческий процесс и создать что-то, что будет вдохновлять будущие поколения /'],
+    })
+    <div class="container container--mobile-large">
+        <div class="vacancies__wrapper">
+            <h3 class="vacancies__subtitle caption">Ищем специалистов</h3>
+            <ul class="vacancies__items">
+                <li class="vacancies__item">
+                    <div class="vacancies__text">
+                        <p>
+                            Специалист по React-разработке с опытом работы использования библиотеки React в течении последних 30 лет, 24/7
+                        </p>
+                    </div>
+                </li>
+                <li class="vacancies__item">
+                    <div class="vacancies__text">
+                        <p>
+                            Middle PHP-разработчик (Bitrix) Специалист по React-разработке с опытом работы использования библиотеки React в течении последних 30 лет, 24/7
+                        </p>
+                    </div>
+                </li>
+                <li class="vacancies__item">
+                    <div class="vacancies__text">
+                        <p>
+                            Специалист по React-разработке с опытом работы использования библиотеки React в течении последних 30 лет, 24/7
+                        </p>
+                    </div>
+                </li>
+                <li class="vacancies__item">
+                    <div class="vacancies__text">
+                        <p>
+                            Специалист по React-разработке с опытом работы использования библиотеки React в течении последних 30 лет, 24/7
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </section>
