@@ -1,5 +1,7 @@
 .projects-block {
-	padding-bottom: 125px;
+	&__subtitle {
+		margin-bottom: 16px;
+	}
 
 	&__items {
 		display: grid;
