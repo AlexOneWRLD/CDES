@@ -16,15 +16,13 @@
 
 	&__text {
 		@include paragraph-margin;
+	  @include adaptive-value-base("font-size", 32, 26, 0);
 
 		width: 100%;
 		max-width: 970px;
-		font-weight: 300;
-		font-size: 32px;
 
 		@include mq(lg) {
 			max-width: 100%;
-			font-size: 26px;
 		}
 	}
 
