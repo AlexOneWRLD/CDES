@@ -1,45 +1,38 @@
-<section class="about">
-    <div class="about__container container">
-         @include('../../components/blocks/_title-block.html', {
-              title: 'О центре /',
-              text: 'мы оставили работу в крупных компаниях, чтобы погрузиться в творческий процесс и создать что-то, что будет вдохновлять будущие поколения /',
-            })
-         <div class="about__body">
-          <ul class="about__items">
-            <li class="about__item">
-              @include('../../components/cards/_about-card.html', {
-              title: 'В нашей команде',
-              text: 'Специалист по React-разработке с опытом работы  использования библиотеки React в течении последних 30 лет, 24/7',
-              img: '1',
-              class: 'about-card--first'
-            })
-          </li>
-          <li class="about__item">
-            @include('../../components/cards/_about-card.html', {
-              title: '',
-              text: 'Специалист по React-разработке с опытом работы  использования библиотеки React в течении последних 30 лет, 24/7',
-              img: '2',
-              class: ''
-            })
-          </li>
-           <li class="about__item">
+<section class="about section">
+    @include('../../components/blocks/_descr-block.html', {
+    title: 'О центре /',
+    text: ['мы оставили работу в крупных компаниях, чтобы погрузиться в творческий процесс и создать что-то, что будет вдохновлять будущие поколения /'],
+    })
+    <div class="container container--mobile-large">
+        <div class="about__wrapper">
+            <h3 class="about__subtitle caption">В нашей команде</h3>
+            <ul class="about__items">
+                <li class="about__item">
+                    @include('../../components/cards/_about-card.html', {
+                    text: ['Специалист по React-разработке с опытом работы использования библиотеки React в течении последних 30 лет, 24/7'],
+                    img: '1',
+                    })
+                </li>
+                <li class="about__item">
+                    @include('../../components/cards/_about-card.html', {
+                    text: ['Специалист по React-разработке с опытом работы использования библиотеки React в течении последних 30 лет, 24/7'],
+                    img: '2',
+                    })
+                </li>
+                <li class="about__item">
 
-            @include('../../components/cards/_about-card.html', {
-              title: '',
-              text: 'React разработка, Битрикс разработка, РНР бэк',
-              img: '3',
-              class: ''
-            })
-          </li>
-           <li class="about__item">
-            @include('../../components/cards/_about-card.html', {
-              title: '',
-              text: 'Специалист по React-разработке с опытом работы  использования библиотеки React в течении последних 30 лет, 24/7',
-              img: '4',
-              class: 'about-card--last'
-            })
-          </li>
-          </ul>
-         </div>
+                    @include('../../components/cards/_about-card.html', {
+                    text: ['React разработка, Битрикс разработка, РНР бэк'],
+                    img: '3',
+                    })
+                </li>
+                <li class="about__item">
+                    @include('../../components/cards/_about-card.html', {
+                    text: ['Специалист по React-разработке с опытом работы использования библиотеки React в течении последних 30 лет, 24/7'],
+                    img: '4',
+                    })
+                </li>
+            </ul>
+        </div>
     </div>
 </section>

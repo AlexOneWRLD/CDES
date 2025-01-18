@@ -3,13 +3,14 @@
 	flex-direction: column;
 	padding-top: calc(var(--header-height) + 50px);
 	padding-bottom: 50px;
-	height: 100vh;
-	height: 100dvh;
+	min-height: 100vh;
+	min-height: 100dvh;
 
 	&__container {
 		@include flex-alignment(60px, center, center);
 
 		position: relative;
+		margin: auto;
 		padding-bottom: 60px;
 		height: 100%;
 	}
@@ -17,6 +18,7 @@
 	&__decor {
 		@include flex-simple(40px);
 
+		position: absolute;
 		justify-content: center;
 	}
 
@@ -48,14 +50,6 @@
 		}
 	}
 
-	&__wrapper {
-		@include flex-alignment(30px, center, center);
-
-		position: absolute;
-		padding: 30px;
-		width: 100%;
-	}
-
 	&__text {
 		@include adaptive-value-base('font-size', 48, 30, 0);
 
@@ -84,7 +78,7 @@
 		@include flex-alignment(30px, center, center);
 
 		overflow: hidden;
-		height: 40px;
+		min-height: 40px;
 		box-sizing: border-box;
 		font-weight: 300;
 		font-size: 18px;
