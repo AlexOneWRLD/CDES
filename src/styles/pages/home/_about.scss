@@ -1,38 +1,47 @@
 .about {
-  padding: 150px 0;
+	&__wrapper {
+		position: relative;
+	}
 
-  @include mq(lg) {
-    padding: 100px 0;
-  }
+	&__subtitle {
+		@include line-clamp(2);
 
-  @include mq(md) {
-    padding: 60px 0;
-  }
+		position: absolute;
+		left: 50px;
+		right: 50px;
+		top: 36px;
+		z-index: 4;
 
-  &__container {
-    @include flex-alignment(200px, center, flex-start, column);
+		@include mq(lg) {
+			left: 20px;
+			right: 20px;
+		}
+	}
 
-    margin-bottom: 45px;
+	&__item {
+		position: relative;
 
-    @include mq(lg) {
-      gap: 100px;
-    }
+		&:first-child {
+			.about-card {
+				border-top-left-radius: 30px;
+				border-top-right-radius: 30px;
+				padding-top: 90px;
 
-    @include mq(md) {
-      gap: 50px;
-    }
-  }
+				@include mq(lg) {
+					padding-top: 80px;
+				}
+			}
+		}
 
-  &__body {
-    width: 100%;
-  }
+		&:last-child {
+			.about-card {
+				border-bottom-right-radius: 30px;
+				border-bottom-left-radius: 30px;
+			}
+		}
 
-  &__item {
-    position: relative;
-    cursor: pointer;
-
-    &:not(:last-child) {
-      border-bottom: 1px solid var(--color-black-100);
-    }
-  }
+		&:not(:last-child) {
+			border-bottom: 1px solid var(--color-black-100);
+		}
+	}
 }

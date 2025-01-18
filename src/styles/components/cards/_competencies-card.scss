@@ -1,62 +1,63 @@
 .competencies-card {
-  @include flex-alignment(60px, space-between, flex-start);
+	@include flex-alignment(60px, space-between, flex-start);
+	@include card(70px 50px 40px);
+	@include animation-hover-card;
 
+	border-radius: 0;
 
+	@include mq(lg) {
+		padding: 60px 20px 30px;
+	}
 
-  @include mq(lg) {
-    flex-direction: column;
-    gap: 26px;
-  }
+	@include mq(lg) {
+		flex-direction: column;
+		gap: 26px;
+	}
 
-  &__start {
-    counter-reset: section;
-    z-index: 10;
-    width: 100%;
-    max-width: 525px;
-  }
+	&__title {
+		border-radius: inherit;
+		font-weight: 300;
+		font-size: 33px;
 
-  &__number {
-    color: var(--color-pink-400);
+		@include mq(lg) {
+			font-size: 28px;
+		}
 
-    @include mq(md) {
-      font-size: 14px;
-    }
-  }
+		@include mq(md) {
+			font-size: 26px;
+		}
 
-  &__title {
-    font-weight: 300;
-    font-size: 33px;
+		a {
+			border-radius: inherit;
 
-    @include mq(lg) {
-      font-size: 28px;
-    }
+			&::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				border: 2px solid transparent;
+				border-radius: inherit;
+				transition: border-color 0.3s;
+			}
 
-    @include mq(md) {
-      font-size: 26px;
-    }
+			&:focus-visible {
+				outline: 0;
 
-    a {
-      &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-      }
-    }
-  }
+				&::before {
+					border-color: var(--color-pink-600);
+				}
+			}
+		}
+	}
 
-  &__text {
-    z-index: 10;
-    width: 100%;
-    max-width: 598px;
+	&__text {
+		@include paragraph-margin;
 
-    @include mq(md) {
-      font-size: 14px;
-    }
+		width: 100%;
+		max-width: 600px;
 
-    p {
-      &:not(:last-child) {
-        margin-bottom: 12px;
-      }
-    }
-  }
+		@include mq(md) {
+			max-width: 100%;
+			font-size: 14px;
+		}
+	}
 }
