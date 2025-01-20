@@ -1,14 +1,17 @@
 .burger-button {
-	--burger-width: 30px;
-	--burger-height: 30px;
+	--burger-width: 26px;
+	--burger-height: 18px;
 	--burger-line-height: 2px;
 	--burger-border-radius: 0;
-	--burger-color: var(--color-black);
+	--burger-color: var(--color-white);
 
 	position: relative;
+  right: -15px;
+  top: 11px;
 	width: var(--burger-width);
 	height: var(--burger-height);
 	color: var(--burger-color);
+
 
 	&::before,
 	&::after {
@@ -47,9 +50,11 @@
 	}
 
 	&--active {
+    z-index: 10000;
+
 		&::before,
 		&::after {
-			top: 50%;
+			top: 60%;
 			transition:
 				transform 0.3s ease-in-out,
 				top 0.3s ease-in-out;
@@ -68,4 +73,17 @@
 			transition: transform 0.3s ease-in-out;
 		}
 	}
+}
+
+
+.burger-wrapper{
+  display: none;
+
+  @include mq(lg) {
+  display: block;
+  border-radius: 10px;
+  width: 57px;
+  height: 40px;
+  background-color: var(--color-pink-600);
+}
 }
