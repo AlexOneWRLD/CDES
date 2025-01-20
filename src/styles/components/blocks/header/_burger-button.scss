@@ -77,8 +77,13 @@
 
 
 .burger-wrapper{
+  display: none;
+
+  @include mq(lg) {
+  display: block;
   border-radius: 10px;
   width: 57px;
   height: 40px;
   background-color: var(--color-pink-600);
+}
 }
