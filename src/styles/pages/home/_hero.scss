@@ -34,7 +34,7 @@
 			content: '';
 			position: absolute;
 			inset: 0;
-			background-image: url('../img/tag.png');
+			background-image: url('../img/home-pages/tag/left-tag.png');
 			opacity: 0.5;
 		}
 
@@ -45,9 +45,13 @@
 
 		&:last-child {
 			&::before {
-				background-image: url('../img/tag-right.png');
+				background-image: url('../img/home-pages/tag/right-tag.png');
 			}
 		}
+	}
+
+	&__wrapper {
+		position: relative;
 	}
 
 	&__text {
@@ -78,6 +82,7 @@
 		@include flex-alignment(30px, center, center);
 
 		overflow: hidden;
+		padding: 4px 0;
 		min-height: 40px;
 		box-sizing: border-box;
 		font-weight: 300;
