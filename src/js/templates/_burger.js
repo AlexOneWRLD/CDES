@@ -12,14 +12,12 @@ const burger = () => {
       document.addEventListener("keydown", keyHandler);
       burgerButton.setAttribute("aria-expanded", "true");
       burgerButton.setAttribute("aria-label", "закрыть меню");
-      header.classList.add("header--fixed");
       burgerButton.focus();
       disableScroll();
     } else {
       document.removeEventListener("keydown", keyHandler);
       burgerButton.setAttribute("aria-expanded", "false");
       burgerButton.setAttribute("aria-label", "открыть меню");
-      header.classList.remove("header--fixed");
       enableScroll();
     }
   };
@@ -27,13 +25,11 @@ const burger = () => {
   const hideBurger = () => {
     burgerButton.classList.remove("burger-button--active");
     menu.classList.remove("burger-menu--active");
-    overlay?.classList.remove("overlay--active");
   };
 
   burgerButton.addEventListener("click", () => {
     burgerButton.classList.toggle("burger-button--active");
     menu.classList.toggle("burger-menu--active");
-    overlay?.classList.toggle("overlay--active");
     checkClass();
   });
 
