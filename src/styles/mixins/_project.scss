@@ -12,7 +12,7 @@
 	color: $color;
 }
 
-@mixin resize-picture($pb: 40%, $fit: cover) {
+@mixin resize-picture($pb: 40%, $radius: 30px) {
 	position: relative;
 	padding-bottom: $pb;
 
@@ -25,7 +25,8 @@
 	}
 
 	img {
-		object-fit: $fit;
+		border-radius: $radius;
+		object-fit: cover;
 	}
 }
 
