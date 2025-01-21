@@ -7,7 +7,6 @@ import { throttle } from './_throttle.js';
     }
 
     const changeHeaderHeight = () => {
-        console.log('changeHeaderHeight')
         document.querySelector(':root').style.setProperty('--header-height', `${header.offsetHeight}px`);
     }
 
