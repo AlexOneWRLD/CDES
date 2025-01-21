@@ -1,4 +1,4 @@
-import { throttle } from '../utils/index.js';
+import { throttle } from './_throttle.js';
 
 (function () {
     const header = document.querySelector('.header')
@@ -7,6 +7,7 @@ import { throttle } from '../utils/index.js';
     }
 
     const changeHeaderHeight = () => {
+        console.log('changeHeaderHeight')
         document.querySelector(':root').style.setProperty('--header-height', `${header.offsetHeight}px`);
     }
 

@@ -9,4 +9,7 @@
 	--color-black-100: #1d1e1c;
 	--color-black-200: #242422;
 	--font-main: 'Feature Mono';
+	--header-height: 100px;
+	--dvh: 100vh;
+	--full-screen: calc(var(--dvh) * 100);
 }
