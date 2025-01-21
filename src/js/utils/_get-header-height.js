@@ -1,4 +1,4 @@
-import { throttle } from '../utils/index.js';
+import { throttle } from './_throttle.js';
 
 (function () {
     const header = document.querySelector('.header')

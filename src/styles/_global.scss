@@ -1,7 +1,8 @@
 body {
+	@include adaptive-value-base('font-size', 18, 14, 0);
+
 	font-family: var(--font-main), sans-serif;
 	font-weight: 400;
-	font-size: 18px;
 	line-height: 1.4;
 	color: var(--color-gray-300);
 	background-color: var(--color-black-100);

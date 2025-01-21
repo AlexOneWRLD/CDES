@@ -1,0 +1,13 @@
+.full-block {
+	display: flex;
+	flex-direction: column;
+	padding-top: calc(var(--header-height) + 40px);
+	padding-bottom: 40px;
+	min-height: var(--full-screen);
+
+	&__container {
+		position: relative;
+		margin: auto;
+		height: 100%;
+	}
+}

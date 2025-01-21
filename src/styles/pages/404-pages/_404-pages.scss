@@ -1,17 +1,13 @@
 .page-error {
-  display: flex;
-	flex-direction: column;
-	padding-top: calc(var(--header-height) + 50px);
-	padding-bottom: 50px;
-	height: 100vh;
-	height: 100dvh;
+	&__title {
+		@include adaptive-value-base('font-size', 48, 30, 0);
 
-&__container {
-    @include flex-alignment(50px, center, flex-start, column);
-    @include adaptive-value-base("font-size", 48, 30, 0);
+		&:not(:last-child) {
+			margin-bottom: 36px;
+		}
+	}
 
-    position: relative;
-		padding-bottom: 60px;
-    height: 100%;
-  }
+	&__link {
+		max-width: fit-content;
+	}
 }
