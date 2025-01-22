@@ -1,4 +1,8 @@
 .burger-menu {
+  position: absolute;
+  right: 0;
+  top: 50px;
+
   @include mq(lg) {
     position: fixed;
     right: 0;
