@@ -9,25 +9,25 @@ toggleInput.addEventListener("click", function () {
   }
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   const reveals = document.querySelectorAll(".hero__text");
+document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll(".hero__text");
 
-//   reveals.forEach((reveal, index) => {
-//     setTimeout(() => {
-//       reveal.classList.add("hero__text--active");
-//     }, index * 800); // Увеличиваем задержку для каждого элемента
-//   });
-// });
+  reveals.forEach((reveal, index) => {
+    setTimeout(() => {
+      reveal.classList.add("hero__text--active");
+    }, index * 800); // Увеличиваем задержку для каждого элемента
+  });
+});
 
-var wrapper = document.getElementsByClassName("hero__text")[0];
-wrapper.style.opacity = "1";
-wrapper.innerHTML = wrapper.textContent.replace(/./g, "<span>$&</span>");
+// var wrapper = document.getElementsByClassName("hero__text")[0];
+// wrapper.style.opacity = "1";
+// wrapper.innerHTML = wrapper.textContent.replace(/./g, "<span>$&</span>");
 
-var spans = wrapper.getElementsByTagName("span");
+// var spans = wrapper.getElementsByTagName("span");
 
-for (var i = 0; i < spans.length; i++) {
-  spans[i].style.animationDelay = i * 30 + "ms";
-}
+// for (var i = 0; i < spans.length; i++) {
+//   spans[i].style.animationDelay = i * 30 + "ms";
+// }
 
 
 // var wrapper = document.getElementsByClassName("descr-block__text")[0];
