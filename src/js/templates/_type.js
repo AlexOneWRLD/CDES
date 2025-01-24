@@ -38,6 +38,7 @@ const initItem = (item, text) => {
 
     if (containers) {
         containers.forEach((container) => {
+            const delay = container.getAttribute('data-text-type-delay')
             const items = container.querySelectorAll('[data-text-type]');
 
             if (!items) {
@@ -65,7 +66,7 @@ const initItem = (item, text) => {
 
             setTimeout(() => {
                 nextTypeItem()
-            }, 1000)
+            }, delay ? delay : 1000)
         })
     }
 }())
