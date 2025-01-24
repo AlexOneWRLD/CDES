@@ -1,3 +1,5 @@
+import './_marquee.js';
+
 const toggleInput = document.querySelector('.toggleMenu[type="checkbox"]');
 const toggleLabel = document.querySelector('label[for="menu"]');
 
