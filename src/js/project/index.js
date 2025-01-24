@@ -1,3 +1,6 @@
+import './_marquee.js';
+import './_show-text.js';
+
 const toggleInput = document.querySelector('.toggleMenu[type="checkbox"]');
 const toggleLabel = document.querySelector('label[for="menu"]');
 
@@ -19,15 +22,30 @@ toggleInput.addEventListener("click", function () {
 //   });
 // });
 
-var wrapper = document.getElementsByClassName("hero__text")[0];
-wrapper.style.opacity = "1";
-wrapper.innerHTML = wrapper.textContent.replace(/./g, "<span>$&</span>");
+// var wrapper = document.getElementsByClassName("hero__text")[0];
+// console.log(wrapper)
+// wrapper.style.opacity = "1";
 
-var spans = wrapper.getElementsByTagName("span");
+// // Заменяем текст, разбивая его по словам
+// wrapper.innerHTML = wrapper.textContent.trim().split(/\s+/).map(function (word) {
+//     return "<span>" + word + "</span>";
+// }).join(" ");
 
-for (var i = 0; i < spans.length; i++) {
-  spans[i].style.animationDelay = i * 30 + "ms";
-}
+// var spans = wrapper.getElementsByTagName("span");
+
+// for (var i = 0; i < spans.length; i++) {
+//     spans[i].style.animationDelay = i * 300 + "ms"; // Измените значение задержки по вашему усмотрению
+// }
+
+// var wrapper = document.getElementsByClassName("hero__text")[0];
+// wrapper.style.opacity = "1";
+// wrapper.innerHTML = wrapper.textContent.replace(/./g, "<span>$&</span>");
+
+// var spans = wrapper.getElementsByTagName("span");
+
+// for (var i = 0; i < spans.length; i++) {
+//   spans[i].style.animationDelay = i * 30 + "ms";
+// }
 
 
 // var wrapper = document.getElementsByClassName("descr-block__text")[0];
