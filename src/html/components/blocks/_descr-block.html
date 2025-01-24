@@ -2,7 +2,6 @@
     <h2 class="descr-block__title">
         @title
     </h2>
-    <div class="descr-block__text">
-        @for (var i = 0; i < text.length; i++) { <p> `+text[i]+` </p> }
+    <div class="descr-block__text" data-show-text="@text" aria-label="@text">
     </div>
 </div>
