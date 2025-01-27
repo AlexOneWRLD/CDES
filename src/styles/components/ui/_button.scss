@@ -32,7 +32,10 @@
 
 	&--back {
 		position: relative;
-		padding: 5px 20px 5px 110px;
+		justify-content: flex-end;
+		padding: 8px 20px 8px 54px;
+		width: 100%;
+		max-width: 240px;
 		text-align: right;
 
 		&::before {
@@ -41,10 +44,11 @@
 			content: '';
 			position: absolute;
 			left: 15px;
-			top: 2px;
-			width: 30px;
-			height: 30px;
+			top: 50%;
+			width: 20px;
+			height: 20px;
 			background-image: url('../img/icons/arrow.svg');
+			transform: translateY(50%);
 			rotate: 180deg;
 		}
 	}

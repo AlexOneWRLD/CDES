@@ -6,7 +6,7 @@
 	display: block;
 	width: 100%;
 	font-weight: 600;
-  text-transform: uppercase;
+	text-transform: uppercase;
 	background-color: var(--color-black-100);
 
 	&__nav {
@@ -14,7 +14,7 @@
 
 		position: relative;
 		align-items: center;
-    justify-content: space-between;
+		justify-content: space-between;
 		padding: 20px 0;
 	}
 
@@ -23,16 +23,23 @@
 		right: -14px;
 		top: 28px;
 
+		&::before {
+			content: '';
+			position: absolute;
+			right: -1px;
+			top: 0;
+			border-radius: 10px;
+			width: 58px;
+			height: 40px;
+			background-color: var(--color-pink-600);
+		}
+	}
 
-  &::before {
-    content: '';
-    position: absolute ;
-    right: -1px;
-    top: 0;
-    border-radius: 10px;
-    width: 58px;
-    height: 40px;
-    background-color: var(--color-pink-600);
-  }
+	&__prev {
+		font-weight: 400;
+
+		&--hidden {
+			display: none;
+		}
 	}
 }
