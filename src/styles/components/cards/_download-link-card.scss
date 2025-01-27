@@ -1,0 +1,32 @@
+.download-link {
+  @include flex-alignment(20px, space-between, center);
+
+  &__text{
+    width: 100%;
+    max-width: 998px;
+
+    @include mq(md) {
+				max-width: 270px;
+			}
+  }
+
+&__icon{
+  @include bg-properties(25px);
+
+  border-radius: 100%;
+  width: 60px;
+  height: 60px;
+  background-color: var(--color-pink-600);
+  transition: background-color 0.4s;
+  rotate: 90deg;
+
+   @media (any-hover: hover) {
+		&:hover {
+			background-color: var(--color-pink-400);
+		}
+	}
+}
+
+
+}
+

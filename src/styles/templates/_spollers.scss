@@ -1,53 +1,58 @@
 .spollers {
 	&__item {
-		&:not(:last-child) {
-			margin-bottom: 20px;
-		}
-	}
-
-	&__title {
-		padding: 10px 15px;
-		width: 100%;
-		text-align: left;
+		border-radius: 30px;
+		padding: 56px;
+		background-color: var(--color-grey-100);
 	}
 
 	&__button {
-		position: relative;
-		border: 1px solid #eee;
-		border-radius: 5px;
-
-		&::before,
-		&::after {
-			content: '';
-			position: absolute;
-			right: 10px;
-			top: 50%;
-			width: 15px;
-			height: 2px;
-			background-color: var(--color-black);
-			transition: transform 0.5s ease 0s;
-		}
-
-		&::before {
-			transform: translate(-75%, -50%) rotate(40deg);
-		}
-
-		&::after {
-			transform: translate(0, -50%) rotate(-40deg);
-		}
+		cursor: pointer;
 
 		&--active {
-			&::before {
-				transform: translateX(-75%) rotate(-40deg);
+			.spollers__control {
+				&::before {
+					transform: rotate(270deg);
+				}
 			}
+		}
+	}
 
-			&::after {
-				transform: rotate(40deg);
-			}
+	&__control {
+		position: relative;
+		outline: 0;
+		width: 100%;
+		text-align: left;
+
+
+		&::before {
+			@include bg-properties;
+
+			content: '';
+			position: absolute;
+			right: 0;
+			top: 0;
+			border-radius: 50%;
+			width: 60px;
+			height: 60px;
+			background-image: url('../../img/icons/arrow.svg');
+			background-size: 25px;
+      transform: rotate(90deg);
+      transition:
+				background-color 0.3s,
+				box-shadow 0.3s,
+				transform 0.3s;
 		}
 	}
 
 	&__body {
-		padding-top: 20px;
+		width: 100%;
+		max-width: 890px;
+		font-weight: 300;
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 35px;
+			}
+		}
 	}
 }

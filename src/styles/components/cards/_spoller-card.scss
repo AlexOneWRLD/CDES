@@ -1,0 +1,15 @@
+.spollers-document {
+  @include flex-alignment(22px, start,center);
+
+  &__icon{
+    @include bg-properties;
+
+    border-radius: 60px;
+		background-size: 30px;
+  }
+
+  &__text{
+    flex-basis: 21%;
+    font-weight: 500;
+  }
+}

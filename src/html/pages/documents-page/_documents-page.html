@@ -1,0 +1,31 @@
+<section class="documents-page">
+  <ul class="documents-page__items">
+    <li class="documents-page__item">
+        @include('../../components/cards/_download-link-card.html', {
+          'text' : 'Скачать брендбук Конференции в формате PDF',
+          'href' : 'eco-brandbook.pdf'
+          })
+    </li>
+    <li class="documents-page__item">
+        @include('../../components/cards/_download-link-card.html', {
+          'text' : 'Пользовательское соглашение',
+          'href' : 'eco-brandbook.pdf'
+          })
+    </li>
+    <li class="documents-page__item">
+        @include('../../components/cards/_download-link-card.html', {
+          'text' : 'Соглашение об обработке персональных данных ',
+          'href' : 'eco-brandbook.pdf'
+          })
+    </li>
+  </ul>
+
+  <ul class="documents-page__spolers spollers" data-spollers="materials-spollers" data-one-spoller>
+    <li class="documents-page__spoler" id="documents-page-details">
+       @include('../../components/cards/_spoller-card.html', {
+        'title' : 'Реквизиты',
+        'text' : ['Работы, предоставляемые для участия в Конференции, должны быть подготовлены в электронном виде строго соответствовать требованиям.'],
+        })
+    </li>
+  </ul>
+</section>
