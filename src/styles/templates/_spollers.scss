@@ -1,58 +1,53 @@
 .spollers {
-	&__item {
-		border-radius: 30px;
-		padding: 56px;
-		background-color: var(--color-grey-100);
-	}
+  &__button {
+    cursor: pointer;
 
-	&__button {
-		cursor: pointer;
+    &--active {
+      .spollers__control {
+        &::before {
+          transform: rotate(270deg);
+        }
+      }
+    }
+  }
 
-		&--active {
-			.spollers__control {
-				&::before {
-					transform: rotate(270deg);
-				}
-			}
-		}
-	}
+  &__control {
+    position: relative;
+    outline: 0;
+    width: 100%;
+    text-align: left;
 
-	&__control {
-		position: relative;
-		outline: 0;
-		width: 100%;
-		text-align: left;
+    &::before {
+      @include bg-properties;
 
-
-		&::before {
-			@include bg-properties;
-
-			content: '';
-			position: absolute;
-			right: 0;
-			top: 0;
-			border-radius: 50%;
-			width: 60px;
-			height: 60px;
-			background-image: url('../../img/icons/arrow.svg');
-			background-size: 25px;
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      background-image: url("../../img/icons/arrow.svg");
+      background-size: 25px;
       transform: rotate(90deg);
       transition:
-				background-color 0.3s,
-				box-shadow 0.3s,
-				transform 0.3s;
-		}
-	}
+        background-color 0.3s,
+        box-shadow 0.3s,
+        transform 0.3s;
+    }
+  }
 
-	&__body {
-		width: 100%;
-		max-width: 890px;
-		font-weight: 300;
+  &__body {
+    @include adaptive-value-base("font-size", 18, 14, 0);
 
-		p {
-			&:not(:last-child) {
-				margin-bottom: 35px;
-			}
-		}
-	}
+    width: 100%;
+    max-width: 890px;
+    font-weight: 400;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 35px;
+      }
+    }
+  }
 }
