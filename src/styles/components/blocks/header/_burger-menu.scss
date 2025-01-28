@@ -185,8 +185,8 @@
 		&--active {
 			grid-template-rows: 1fr;
 			overflow-y: auto;
-			max-height: 100vh;
 			padding-bottom: 80px;
+			max-height: 100vh;
 
 			@include mq(lg) {
 				width: 100%;
