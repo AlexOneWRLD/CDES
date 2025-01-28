@@ -5,9 +5,24 @@
     @include flex-alignment(5px, center, normal, column);
   }
 
-  &__items,
-  &__spolers {
+  &__items {
     @include card(40px 50px);
     @include flex-simple(55px, column);
+
+    @include mq(lg) {
+      gap: 40px;
+    }
+  }
+
+  &__text {
+    @include adaptive-value-base("font-size", 24, 14, 0);
+
+    text-transform: uppercase;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
   }
 }

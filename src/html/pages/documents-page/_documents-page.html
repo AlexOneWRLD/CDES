@@ -1,33 +1,41 @@
 <section class="documents-page section">
+  <h1 class="sr-only">Документы CDES</h1>
   <div class="documents-page__container container">
-  <ul class="documents-page__items">
-    <li class="documents-page__item">
+    <ul class="documents-page__items">
+      <li class="documents-page__item">
         @include('../../components/cards/_download-link-card.html', {
-          'text' : 'Скачать брендбук Конференции в формате PDF',
-          'href' : 'eco-brandbook.pdf'
-          })
-    </li>
-    <li class="documents-page__item">
-        @include('../../components/cards/_download-link-card.html', {
-          'text' : 'Пользовательское соглашение',
-          'href' : 'eco-brandbook.pdf'
-          })
-    </li>
-    <li class="documents-page__item">
-        @include('../../components/cards/_download-link-card.html', {
-          'text' : 'Соглашение об обработке персональных данных ',
-          'href' : 'eco-brandbook.pdf'
-          })
-    </li>
-  </ul>
-
-  <ul class="documents-page__spolers spollers" data-spollers="materials-spollers" data-one-spoller>
-    <li class="spollers__item" id="documents-page-details">
-       @include('../../components/cards/_spoller-card.html', {
-        'title' : 'Реквизиты',
-        'text' : ['Работы, предоставляемые для участия в Конференции, должны быть подготовлены в электронном виде строго соответствовать требованиям.'],
+          'text' :'Скачать брендбук Конференции в формате PDF',
+          'href' :'eco-brandbook.pdf'
         })
-    </li>
-  </ul>
+      </li>
+      <li class="documents-page__item">
+        @include('../../components/cards/_download-link-card.html', {
+        'text' :'Пользовательское соглашение',
+        'href' : 'eco-brandbook.pdf'
+      })
+      </li>
+      <li class="documents-page__item">
+        @include('../../components/cards/_download-link-card.html', {
+        'text' : 'Соглашение об обработке персональных данных ',
+        'href' : 'eco-brandbook.pdf'
+      })
+      </li>
+    </ul>
+
+    <div class="documents-page__items">
+      <h2 class="documents-page__title">Реквизиты</h2>
+      <div class="documents-page__text">
+        <p>
+          Наименование организации: ООО "ЦЕНТР ЦИФРОВЫХ И ОБРАЗОВАТЕЛЬНЫХ
+          РЕШЕНИЙ"
+        </p>
+        <p>ИНН/КПП: 9723170160/772201001</p>
+        <p>ОГРН: 1227700620476</p>
+        <p>
+          Юридичекий адресс Адрес: 11024, Г.МОСКВА, ВН.ТЕР.Г. МУНИЦИПАЛЬНЫЙ
+          ОКРУГ ЛЕФОРТОВО, УЛ АВИАМОТОРНАЯ,Д. 50 СТР. 2 , ПОМЕЩ. 36/2
+        </p>
+      </div>
+    </div>
   </div>
 </section>
