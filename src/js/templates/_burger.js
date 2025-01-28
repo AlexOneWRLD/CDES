@@ -1,11 +1,12 @@
 const burger = () => {
     const burgerToggle = document.querySelector(".burger-menu__toggle");
     const burgerButton = document.querySelector("[data-burger-button]");
+    const menuWrapper = document.querySelector('.burger-menu')
     const menu = document.querySelector("[data-menu]");
     const menuLinks = document.querySelectorAll("[data-menu-link]");
 
     const checkClass = () => {
-        if (burgerButton.classList.contains("burger-button--active")) {
+        if (burgerButton.classList.contains("burger-menu__button--active")) {
             document.addEventListener("keydown", keyHandler);
             burgerButton.setAttribute("aria-expanded", "true");
             burgerButton.setAttribute("aria-label", "закрыть меню");
@@ -18,12 +19,16 @@ const burger = () => {
     };
 
     const hideBurger = () => {
-        burgerToggle.classList.add("burger-menu__toggle--active");
+        burgerButton.classList.remove("burger-menu__button--active");
+        menuWrapper.classList.remove('burger-menu--active');
+        burgerToggle.classList.remove("burger-menu__toggle--active");
         menu.classList.remove("burger-menu__content--active");
     };
 
     burgerButton.addEventListener("click", () => {
+        burgerButton.classList.toggle("burger-menu__button--active");
         burgerToggle.classList.toggle("burger-menu__toggle--active");
+        menuWrapper.classList.toggle('burger-menu--active');
         menu.classList.toggle("burger-menu__content--active");
         checkClass();
     });

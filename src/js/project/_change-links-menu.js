@@ -9,7 +9,7 @@ const setCurrentNamePage = (link, titleForCurrentPage) => {
     titleForCurrentPage.innerHTML = linkText
 }
 
-let PATHS = {
+const PATHS = {
     home: 'index',
     allProjects: 'all-projects-page'
 };
@@ -21,7 +21,7 @@ let PATHS = {
     const burger = document.querySelector('.burger-menu')
     const buttonBack = document.querySelector('.header__prev')
 
-    if (!burger) {
+    if (!burger || !links || !titleForCurrentPage) {
         return null
     }
 
