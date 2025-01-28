@@ -5,13 +5,11 @@
 	--burger-border-radius: 0;
 	--burger-color: var(--color-white);
 
-	position: relative;
-  right: -15px;
-  top: 11px;
-	width: var(--burger-width);
-	height: var(--burger-height);
+	// right: -15px;
+	// top: 11px;
+	// width: var(--burger-width);
+	// height: var(--burger-height);
 	color: var(--burger-color);
-
 
 	&::before,
 	&::after {
@@ -34,9 +32,9 @@
 		top: calc(100% - var(--burger-line-height));
 	}
 
-	@include mq(lg, min) {
-		display: none;
-	}
+	// @include mq(lg, min) {
+	// 	display: none;
+	// }
 
 	&__line {
 		position: absolute;
@@ -50,7 +48,7 @@
 	}
 
 	&--active {
-    z-index: 10000;
+		z-index: 10000;
 
 		&::before,
 		&::after {
@@ -75,15 +73,14 @@
 	}
 }
 
+.burger-wrapper {
+	display: none;
 
-.burger-wrapper{
-  display: none;
-
-  @include mq(lg) {
-  display: block;
-  border-radius: 10px;
-  width: 57px;
-  height: 40px;
-  background-color: var(--color-pink-600);
-}
+	@include mq(lg) {
+		display: block;
+		border-radius: 10px;
+		width: 57px;
+		height: 40px;
+		background-color: var(--color-pink-600);
+	}
 }
