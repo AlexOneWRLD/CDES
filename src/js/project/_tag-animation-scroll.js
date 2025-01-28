@@ -2,6 +2,10 @@
     const heroDecor = document.querySelector('.hero__decor');
     const dataBlocks = document.querySelectorAll('[data-descr]'); // Замените на ваш атрибут или класс
 
+    if (!heroDecor || !dataBlocks) {
+        return null
+    }
+
     // Функция проверки положения блока
     function isInViewport(element) {
         const rect = element.getBoundingClientRect();
